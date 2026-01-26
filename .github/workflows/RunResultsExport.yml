@@ -1,0 +1,76 @@
+name: Run Results Export
+run-name: Run Results Export
+on: 
+  schedule:
+    - cron: "0 1 * * 3"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    # 1. Start MySQL as a service container
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: wca
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with: 
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      # 2. Import the WCA SQL file (The "Shell" part)
+      - name: Import WCA Database
+        run: |
+          # Use -h 127.0.0.1 to force TCP connection to the service container
+          mkdir wca-export
+          echo "Downloading data"
+          curl -L "https://www.worldcubeassociation.org/export/results/v2/sql" -o wca-export/data.zip # -L is follow redirects, -o is output
+          unzip wca-export/data.zip -d wca-export # -d means destination folder
+          echo "Creating WCA database"
+          mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS wca;"
+          echo "Importing data to database"
+          mysql -h 127.0.0.1 -u root -proot wca < wca-export/WCA_export.sql
+          echo "Finished importing"
+
+      # 3. Run your Node.js script
+      - name: Run Export Script
+        env:
+          DB_HOST: 127.0.0.1
+          DB_USER: root
+          DB_PASS: root
+          DB_NAME: wca
+        run: node update.js
+
+      - name: Commit and Push if JSON changed
+        run: |
+          # 1. Configure the "Git User" (GitHub's standard bot account)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # 2. Stage the file
+          git add out.json
+          
+          # 3. Check if there are actual changes to commit
+          # git diff --quiet returns 0 if no changes, 1 if changes exist
+          if ! git diff --quiet --cached; then
+            echo "Changes detected! Committing..."
+            git commit -m "Automated WCA Data Update: $(date +'%Y-%m-%d')"
+            git push
+          else
+            echo "No changes found. Skipping commit."
+          fi

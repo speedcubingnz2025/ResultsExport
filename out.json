@@ -1,0 +1,204 @@
+{
+  "averages": [
+    {
+      "event_id": "555bf",
+      "person_name": "Tom Nelson",
+      "person_id": "2013NELS01",
+      "average": 27624
+    },
+    {
+      "event_id": "444bf",
+      "person_name": "Tom Nelson",
+      "person_id": "2013NELS01",
+      "average": 13937
+    },
+    {
+      "event_id": "333fm",
+      "person_name": "Tom Nelson",
+      "person_id": "2013NELS01",
+      "average": 2233
+    },
+    {
+      "event_id": "sq1",
+      "person_name": "Adrien Auvray Matyn",
+      "person_id": "2018MATY02",
+      "average": 565
+    },
+    {
+      "event_id": "pyram",
+      "person_name": "Jasper Murray",
+      "person_id": "2018MURR03",
+      "average": 140
+    },
+    {
+      "event_id": "222",
+      "person_name": "Connor Johnson",
+      "person_id": "2022JOHN14",
+      "average": 128
+    },
+    {
+      "event_id": "333oh",
+      "person_name": "Dwyane Ramos",
+      "person_id": "2019RAMO05",
+      "average": 847
+    },
+    {
+      "event_id": "skewb",
+      "person_name": "Dwyane Ramos",
+      "person_id": "2019RAMO05",
+      "average": 226
+    },
+    {
+      "event_id": "333bf",
+      "person_name": "James Macdiarmid",
+      "person_id": "2015MACD03",
+      "average": 2061
+    },
+    {
+      "event_id": "clock",
+      "person_name": "Lachlan Gibson",
+      "person_id": "2022GIBS04",
+      "average": 226
+    },
+    {
+      "event_id": "777",
+      "person_name": "Henry Eyles",
+      "person_id": "2021EYLE01",
+      "average": 12974
+    },
+    {
+      "event_id": "333",
+      "person_name": "Andrew Feng",
+      "person_id": "2020FENG02",
+      "average": 564
+    },
+    {
+      "event_id": "555",
+      "person_name": "Alexander Vujcich",
+      "person_id": "2019VUJC01",
+      "average": 4324
+    },
+    {
+      "event_id": "666",
+      "person_name": "Henry Eyles",
+      "person_id": "2021EYLE01",
+      "average": 8496
+    },
+    {
+      "event_id": "444",
+      "person_name": "Alexander Vujcich",
+      "person_id": "2019VUJC01",
+      "average": 2320
+    },
+    {
+      "event_id": "minx",
+      "person_name": "Alexander Vujcich",
+      "person_id": "2019VUJC01",
+      "average": 2660
+    }
+  ],
+  "singles": [
+    {
+      "event_id": "555bf",
+      "person_name": "Tom Nelson",
+      "person_id": "2013NELS01",
+      "best": 22713
+    },
+    {
+      "event_id": "skewb",
+      "person_name": "Dwyane Ramos",
+      "person_id": "2019RAMO05",
+      "best": 117
+    },
+    {
+      "event_id": "sq1",
+      "person_name": "Adrien Auvray Matyn",
+      "person_id": "2018MATY02",
+      "best": 447
+    },
+    {
+      "event_id": "pyram",
+      "person_name": "Connor Johnson",
+      "person_id": "2022JOHN14",
+      "best": 82
+    },
+    {
+      "event_id": "333fm",
+      "person_name": "Tom Nelson",
+      "person_id": "2013NELS01",
+      "best": 20
+    },
+    {
+      "event_id": "minx",
+      "person_name": "Alexander Vujcich",
+      "person_id": "2019VUJC01",
+      "best": 2405
+    },
+    {
+      "event_id": "222",
+      "person_name": "Connor Johnson",
+      "person_id": "2022JOHN14",
+      "best": 47
+    },
+    {
+      "event_id": "333mbf",
+      "person_name": "James Macdiarmid",
+      "person_id": "2015MACD03",
+      "best": 520354303
+    },
+    {
+      "event_id": "333bf",
+      "person_name": "James Macdiarmid",
+      "person_id": "2015MACD03",
+      "best": 1763
+    },
+    {
+      "event_id": "444bf",
+      "person_name": "Tom Nelson",
+      "person_id": "2013NELS01",
+      "best": 10752
+    },
+    {
+      "event_id": "555",
+      "person_name": "Alexander Vujcich",
+      "person_id": "2019VUJC01",
+      "best": 3832
+    },
+    {
+      "event_id": "333oh",
+      "person_name": "Jasper Murray",
+      "person_id": "2018MURR03",
+      "best": 687
+    },
+    {
+      "event_id": "clock",
+      "person_name": "Lachlan Gibson",
+      "person_id": "2022GIBS04",
+      "best": 153
+    },
+    {
+      "event_id": "444",
+      "person_name": "Andrew Feng",
+      "person_id": "2020FENG02",
+      "best": 1868
+    },
+    {
+      "event_id": "777",
+      "person_name": "Dwyane Ramos",
+      "person_id": "2019RAMO05",
+      "best": 12022
+    },
+    {
+      "event_id": "666",
+      "person_name": "Dwyane Ramos",
+      "person_id": "2019RAMO05",
+      "best": 7571
+    },
+    {
+      "event_id": "333",
+      "person_name": "Andrew Feng",
+      "person_id": "2020FENG02",
+      "best": 441
+    }
+  ]
+}
