@@ -10,7 +10,7 @@ jobs:
   build-and-run:
     runs-on: ubuntu-latest
 
-    # 1. Start MySQL as a service container
+    # Start MySQL as a service container
     services:
       mysql:
         image: mysql:8.0
@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 2. Import the WCA SQL file (The "Shell" part)
+      # Import the WCA SQL file (The "Shell" part)
       - name: Import WCA Database
         run: |
           # Use -h 127.0.0.1 to force TCP connection to the service container
@@ -47,7 +47,16 @@ jobs:
           mysql -h 127.0.0.1 -u root -proot wca < wca-export/WCA_export.sql
           echo "Finished importing"
 
-      # 3. Run your Node.js script
+      # Indexes to make go faster
+      - name: Create Indexes
+        run: |
+          echo "Making indexes..."
+          mysql -h 127.0.0.1 -u root -proot wca -e "
+            CREATE INDEX idx_nz_records ON results (person_country_id, event_id, best);
+            CREATE INDEX idx_nz_average ON results (person_country_id, event_id, average);
+          "
+
+      # Run updater script
       - name: Run Export Script
         env:
           DB_HOST: 127.0.0.1

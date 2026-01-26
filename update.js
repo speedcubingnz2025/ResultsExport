@@ -5,6 +5,7 @@ console.log('Creating database connection');
 const connection = await mysql.createConnection({
   host: 'localhost',
   user: 'root',
+  password: 'root',
   database: 'wca',
 });
 
