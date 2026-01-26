@@ -63,7 +63,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
           # 2. Stage the file
-          git add out.json
+          git add output/national_records.json
           
           # 3. Check if there are actual changes to commit
           # git diff --quiet returns 0 if no changes, 1 if changes exist

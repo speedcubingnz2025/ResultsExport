@@ -24,7 +24,7 @@ try {
   const [averages] = await connection.query(makeRecordsQuery('average'));
   const [singles] = await connection.query(makeQuery('best'));
   const data = {averages, singles};
-  fs.writeFileSync('./out.json', JSON.stringify(data, null, 2));
+  fs.writeFileSync('./output/national_records.json', JSON.stringify(data, null, 2));
   await connection.end();
   console.log('Finished update')
 } catch (error) {
