@@ -3,10 +3,10 @@ import fs from 'fs';
 
 console.log('Creating database connection');
 const connection = await mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'wca',
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASS || '',
+  database: process.env.DB_NAME || 'wca',
 });
 
 const makeRecordsQuery = (type) => `SELECT r.event_id, r.person_name, r.person_id, r.${type} FROM results r
@@ -23,7 +23,7 @@ const makeRecordsQuery = (type) => `SELECT r.event_id, r.person_name, r.person_i
 try {
   console.log('Starting queries');
   const [averages] = await connection.query(makeRecordsQuery('average'));
-  const [singles] = await connection.query(makeQuery('best'));
+  const [singles] = await connection.query(makeRecordsQuery('best'));
   const data = {averages, singles};
   fs.writeFileSync('./output/national_records.json', JSON.stringify(data, null, 2));
   await connection.end();
