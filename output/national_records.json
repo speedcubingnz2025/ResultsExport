@@ -28,7 +28,7 @@
       "event_id": "333oh",
       "person_name": "Dwyane Ramos",
       "person_id": "2019RAMO05",
-      "average": 847
+      "average": 836
     },
     {
       "event_id": "444",
@@ -56,9 +56,9 @@
     },
     {
       "event_id": "666",
-      "person_name": "Henry Eyles",
-      "person_id": "2021EYLE01",
-      "average": 8496
+      "person_name": "Dwyane Ramos",
+      "person_id": "2019RAMO05",
+      "average": 8495
     },
     {
       "event_id": "777",
@@ -126,7 +126,7 @@
       "event_id": "333mbf",
       "person_name": "James Macdiarmid",
       "person_id": "2015MACD03",
-      "best": 520354303
+      "best": 470355503
     },
     {
       "event_id": "333oh",
@@ -180,7 +180,7 @@
       "event_id": "minx",
       "person_name": "Alexander Vujcich",
       "person_id": "2019VUJC01",
-      "best": 2405
+      "best": 2232
     },
     {
       "event_id": "pyram",
