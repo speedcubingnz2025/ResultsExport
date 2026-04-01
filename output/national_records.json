@@ -123,6 +123,12 @@
       "best": 20
     },
     {
+      "event_id": "333fm",
+      "person_name": "Tom Nelson",
+      "person_id": "2013NELS01",
+      "best": 20
+    },
+    {
       "event_id": "333mbf",
       "person_name": "James Macdiarmid",
       "person_id": "2015MACD03",
@@ -142,9 +148,9 @@
     },
     {
       "event_id": "444bf",
-      "person_name": "Tom Nelson",
-      "person_id": "2013NELS01",
-      "best": 9754
+      "person_name": "Jack McDougall",
+      "person_id": "2020MCDO01",
+      "best": 9076
     },
     {
       "event_id": "555",
