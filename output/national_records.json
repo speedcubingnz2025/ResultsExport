@@ -20,9 +20,9 @@
     },
     {
       "event_id": "333fm",
-      "person_name": "Tom Nelson",
-      "person_id": "2013NELS01",
-      "average": 2233
+      "person_name": "Jack McDougall",
+      "person_id": "2020MCDO01",
+      "average": 2167
     },
     {
       "event_id": "333oh",
@@ -118,15 +118,9 @@
     },
     {
       "event_id": "333fm",
-      "person_name": "Tom Nelson",
-      "person_id": "2013NELS01",
-      "best": 20
-    },
-    {
-      "event_id": "333fm",
-      "person_name": "Tom Nelson",
-      "person_id": "2013NELS01",
-      "best": 20
+      "person_name": "Jack McDougall",
+      "person_id": "2020MCDO01",
+      "best": 19
     },
     {
       "event_id": "333mbf",
